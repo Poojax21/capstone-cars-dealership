@@ -1,0 +1,8 @@
+[20/Oct/2026 19:09:10] "POST /djangoapp/login HTTP/1.1" 200 103
+[20/Oct/2026 19:09:10] "POST /djangoapp/logout HTTP/1.1" 200 53
+[20/Oct/2026 19:09:10] "GET /djangoapp/reviews/dealer/1 HTTP/1.1" 200 785
+[20/Oct/2026 19:09:11] "GET /djangoapp/get_dealers/ HTTP/1.1" 200 2073
+[20/Oct/2026 19:09:11] "GET /djangoapp/dealer/1 HTTP/1.1" 200 237
+[20/Oct/2026 19:09:11] "GET /djangoapp/get_dealers/Kansas HTTP/1.1" 200 644
+[20/Oct/2026 19:09:11] "GET /djangoapp/get_cars/ HTTP/1.1" 200 831
+[20/Oct/2026 19:09:12] "GET /djangoapp/analyze/Fantastic%20services HTTP/1.1" 200 70

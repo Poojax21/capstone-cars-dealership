@@ -1,0 +1,3 @@
+$ curl http://localhost:8000/djangoapp/get_dealers/Kansas
+
+{"status": 200, "dealers": [{"id": 1, "full_name": "Kansas City Auto Mall", "short_name": "KC Auto Mall", "address": "1200 Main Street", "city": "Kansas City", "state": "Kansas", "zip": "66101", "latitude": 39.1141, "longitude": -94.6275}, {"id": 2, "full_name": "Wichita Motors", "short_name": "Wichita Motors", "address": "455 N Broadway", "city": "Wichita", "state": "Kansas", "zip": "67202", "latitude": 37.6872, "longitude": -97.3301}, {"id": 3, "full_name": "Topeka Car Center", "short_name": "Topeka Cars", "address": "800 SW Kansas Ave", "city": "Topeka", "state": "Kansas", "zip": "66603", "latitude": 39.0473, "longitude": -95.6752}]}

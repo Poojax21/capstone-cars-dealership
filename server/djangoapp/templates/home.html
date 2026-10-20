@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="hero">
+    <h1>Welcome to Cars Dealership</h1>
+    <p>Browse our nationwide network of dealerships and share your experience.</p>
+  </section>
+
+  <form class="filter-bar" method="get" action="/">
+    <label for="state">Filter by State:</label>
+    <select name="state" id="state" onchange="this.form.submit()">
+      <option value="">All States</option>
+      {% for s in states %}
+        <option value="{{ s }}" {% if s == selected_state %}selected{% endif %}>{{ s }}</option>
+      {% endfor %}
+    </select>
+    <noscript><button type="submit">Apply</button></noscript>
+  </form>
+
+  <h2>Our Dealerships</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Dealer Name</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Address</th>
+        <th>Reviews</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for dealer in dealers %}
+      <tr>
+        <td><a href="/dealer/{{ dealer.id }}">{{ dealer.full_name }}</a></td>
+        <td>{{ dealer.city }}</td>
+        <td>{{ dealer.state }}</td>
+        <td>{{ dealer.address }}</td>
+        <td><a class="btn-small" href="/dealer/{{ dealer.id }}">Review Dealer</a></td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="5">No dealers found.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% if not logged_in %}
+    <p class="hint">Please <a href="/login">log in</a> to post a review.</p>
+  {% endif %}
+{% endblock %}

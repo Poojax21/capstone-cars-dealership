@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="dealer-header">
+    <h1>{{ dealer.full_name }}</h1>
+    <p class="muted">{{ dealer.address }}, {{ dealer.city }}, {{ dealer.state }} {{ dealer.zip }}</p>
+    <p class="muted">Coordinates: {{ dealer.latitude }}, {{ dealer.longitude }}</p>
+  </section>
+
+  <h2>Dealer Reviews</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Reviewer</th>
+        <th>Review</th>
+        <th>Sentiment</th>
+        <th>Purchase</th>
+        <th>Car</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for review in reviews %}
+      <tr>
+        <td>{{ review.name }}</td>
+        <td>{{ review.review }}</td>
+        <td><span class="badge {{ review.sentiment }}">{{ review.sentiment }}</span></td>
+        <td>{% if review.purchase %}Yes{% else %}No{% endif %}</td>
+        <td>{{ review.car_make }} {{ review.car_model }} {{ review.car_year }}</td>
+        <td>{{ review.purchase_date|default:"-" }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="6">No reviews yet. Be the first to review!</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <p><a class="btn" href="/dealer/{{ dealer.id }}/review">Post a Review</a></p>
+{% endblock %}

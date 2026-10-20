@@ -1,0 +1,9 @@
+Unauthorized: /djangoapp/login
+[20/Oct/2026 19:03:26] "POST /djangoapp/login HTTP/1.1" 401 58
+[20/Oct/2026 19:03:27] "POST /djangoapp/logout HTTP/1.1" 200 53
+[20/Oct/2026 19:03:27] "GET /djangoapp/reviews/dealer/1 HTTP/1.1" 200 512
+[20/Oct/2026 19:03:27] "GET /djangoapp/get_dealers/ HTTP/1.1" 200 2073
+[20/Oct/2026 19:03:28] "GET /djangoapp/dealer/1 HTTP/1.1" 200 237
+[20/Oct/2026 19:03:28] "GET /djangoapp/get_dealers/Kansas HTTP/1.1" 200 644
+[20/Oct/2026 19:03:28] "GET /djangoapp/get_cars/ HTTP/1.1" 200 831
+[20/Oct/2026 19:03:28] "GET /djangoapp/analyze/Fantastic%20services HTTP/1.1" 200 70

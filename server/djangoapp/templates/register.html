@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Sign Up</h1>
+  <form class="review-form" method="post" action="/register">
+    {% csrf_token %}
+    <label>Username <input type="text" name="username" required></label>
+    <label>First Name <input type="text" name="first_name" required></label>
+    <label>Last Name <input type="text" name="last_name" required></label>
+    <label>Email <input type="email" name="email" required></label>
+    <label>Password <input type="password" name="password" required></label>
+    <button class="btn" type="submit">Register</button>
+  </form>
+{% endblock %}

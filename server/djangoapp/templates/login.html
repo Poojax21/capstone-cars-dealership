@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Login</h1>
+  {% if error %}<p class="badge negative">{{ error }}</p>{% endif %}
+  <form class="review-form" method="post" action="/login">
+    {% csrf_token %}
+    <label>Username <input type="text" name="userName" required></label>
+    <label>Password <input type="password" name="password" required></label>
+    <button class="btn" type="submit">Login</button>
+  </form>
+  <p>New here? <a href="/register">Create an account</a></p>
+{% endblock %}

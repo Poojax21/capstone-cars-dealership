@@ -1,0 +1,6 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>
+  <rect width='120' height='120' rx='60' fill='#2f9e44'/>
+  <circle cx='60' cy='45' r='20' fill='#ffffff' opacity='0.9'/>
+  <path d='M22 108c6-26 24-36 38-36s32 10 38 36z' fill='#ffffff' opacity='0.9'/>
+  <text x='60' y='116' text-anchor='middle' font-family='Segoe UI,Arial' font-size='13' font-weight='700' fill='#ffffff'>MC</text>
+</svg>

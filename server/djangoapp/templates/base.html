@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars Dealership</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">Cars Dealership</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      {% if user.is_authenticated %}
+        <li class="nav-user">Logged in as <strong>{{ user.username }}</strong></li>
+        <li><a href="/logout">Logout</a></li>
+      {% else %}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Sign Up</a></li>
+      {% endif %}
+      <li><a href="/admin/">Admin</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Cars Dealership. All rights reserved.</p>
+    <p>Contact: <a href="mailto:support@carsdealership.com">support@carsdealership.com</a></p>
+  </footer>
+</body>
+</html>

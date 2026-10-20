@@ -1,0 +1,3 @@
+$ curl http://localhost:8000/djangoapp/dealer/1
+
+{"status": 200, "dealer": {"id": 1, "full_name": "Kansas City Auto Mall", "short_name": "KC Auto Mall", "address": "1200 Main Street", "city": "Kansas City", "state": "Kansas", "zip": "66101", "latitude": 39.1141, "longitude": -94.6275}}

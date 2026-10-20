@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Post a Review for {{ dealer.full_name }}</h1>
+  <form class="review-form" method="post" action="/dealer/{{ dealer.id }}/review">
+    {% csrf_token %}
+    <label>Your Name
+      <input type="text" name="name" value="{% if user.is_authenticated %}{{ user.username }}{% endif %}" required>
+    </label>
+    <label>Your Review
+      <textarea name="review" rows="5" placeholder="Tell us about your experience..." required></textarea>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="purchase"> I purchased a car here
+    </label>
+    <div class="row">
+      <label>Car Make
+        <input type="text" name="car_make" placeholder="Toyota">
+      </label>
+      <label>Car Model
+        <input type="text" name="car_model" placeholder="Camry">
+      </label>
+      <label>Car Year
+        <input type="text" name="car_year" placeholder="2023">
+      </label>
+    </div>
+    <button class="btn" type="submit">Submit Review</button>
+  </form>
+{% endblock %}
